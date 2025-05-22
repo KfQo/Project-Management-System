@@ -3,7 +3,7 @@ from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
 
 def fetch_projects():
-    conn = sqlite3.connect('Setname database .db')
+    conn = sqlite3.connect('projects.db')
     c = conn.cursor()
     c.execute("SELECT name, budget, start_date, end_date, description FROM projects")
     data = c.fetchall()
